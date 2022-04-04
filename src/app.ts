@@ -52,7 +52,7 @@ async function start() {
     if (computeTexture) {
       computeTexture = device.createTexture({
         size: presentationSize,
-        format: 'rgba16float',
+        format: 'rgba8unorm',
         usage:
         GPUTextureUsage.TEXTURE_BINDING |
         GPUTextureUsage.STORAGE_BINDING |
@@ -61,7 +61,7 @@ async function start() {
     
       computeCopyTexture = device.createTexture({
         size: presentationSize,
-        format: 'rgba16float',
+        format: 'rgba8unorm',
         usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST
       });
     }
@@ -99,7 +99,7 @@ async function start() {
         binding: 3,
         visibility: GPUShaderStage.COMPUTE,
         storageTexture: {
-          format: 'rgba16float',
+          format: 'rgba8unorm',
           access: 'write-only'
         }
       }
@@ -173,7 +173,7 @@ async function start() {
 
   computeTexture = device.createTexture({
     size: presentationSize,
-    format: 'rgba16float',
+    format: 'rgba8unorm',
     usage:
     GPUTextureUsage.TEXTURE_BINDING |
     GPUTextureUsage.STORAGE_BINDING |
@@ -182,7 +182,7 @@ async function start() {
 
   computeCopyTexture = device.createTexture({
     size: presentationSize,
-    format: 'rgba16float',
+    format: 'rgba8unorm',
     usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST
   });
   

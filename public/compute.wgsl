@@ -6,7 +6,7 @@ struct Uniforms {
 @group(0) @binding(0) var<uniform> uniforms: Uniforms;
 @group(0) @binding(1) var mySampler : sampler;
 @group(0) @binding(2) var computeCopyTexture : texture_2d<f32>;
-@group(0) @binding(3) var outputTex: texture_storage_2d<rgba16float, write>;
+@group(0) @binding(3) var outputTex: texture_storage_2d<rgba8unorm, write>;
 
 var<private> RNGSTATE: u32 = 42u;
 
