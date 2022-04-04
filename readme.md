@@ -7,4 +7,4 @@ Implementation of Conway's Game of Life using the GPU.
 
 * Install with `yarn`
 * Build with `yarn build`
-* Run an interactive Snowpack server with `yarn start`
+* Run an interactive Snowpack server with `yarn start`. Snowpack should open a tab at `http://localhost:8080` that runs the app.
