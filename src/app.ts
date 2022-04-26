@@ -20,6 +20,11 @@ async function start() {
   const context = canvas.getContext('webgpu');
   if (!context) throw Error("Couldn't create a WebGPU context.");
 
+  const noSupport: HTMLDivElement | null = document.querySelector('.no-support');
+  if (noSupport) {
+    noSupport.style.display = 'none';
+  }
+  
   //// LOAD RELEVANT FILES ////
   const computeWGSL = await fetch('/compute.wgsl')
     .then(response => response.text());

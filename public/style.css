@@ -7,3 +7,9 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.no-support {
+    max-width: 600px;
+    background-color: lightgrey;
+    padding: 1rem;
+}
