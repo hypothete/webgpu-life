@@ -24,12 +24,12 @@ async function start() {
   if (noSupport) {
     noSupport.style.display = 'none';
   }
-  
+
   //// LOAD RELEVANT FILES ////
-  const computeWGSL = await fetch('/compute.wgsl')
+  const computeWGSL = await fetch('./compute.wgsl')
     .then(response => response.text());
 
-  const fullscreenTexturedQuadWGSL = await fetch('/fullscreen-textured-quad.wgsl')
+  const fullscreenTexturedQuadWGSL = await fetch('./fullscreen-textured-quad.wgsl')
     .then(response => response.text());
 
   //// CANVAS SETUP ////
